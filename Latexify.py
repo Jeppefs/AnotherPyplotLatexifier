@@ -28,20 +28,22 @@ def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8, label_width
     #label_height = 1.05 
 
     if fig_width is None:
-        fig_width = cmToInch(12.65076) # width in inches. The standard is report with 11pt font
+        fig_width = cmToInch(12)
+    else:
+        fig_width = cmToInch(fig_width) # Change from width in cm to inches That's just how it works man. The standard is report with 11pt font
     
-
     if columns == 1:
         fig_width = fig_width * 0.99
     elif  columns == 2:
-        fig_width = fig_width * (1/0.49)
-        #fig_width = fig_width * 0.49
+        fig_width = fig_width * 0.49
     elif columns == 3:
         fig_width = fig_width * 0.32
 
     if fig_height is None:
         golden_mean = (np.sqrt(5)-1.0)/2.0 # Aesthetic ratio
         fig_height = fig_width*golden_mean
+    else:
+        fig_heigh = cmToInch(fig_height)
 
     params = {'backend': 'ps',
               #'text.latex.preamble': ['\usepackage{gensymb}'],
@@ -55,6 +57,7 @@ def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8, label_width
              # 'font.family': 'serif'
     }
 
+    print(fig_width, fig_height)
     matplotlib.rcParams.update(params)
 
 

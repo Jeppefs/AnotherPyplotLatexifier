@@ -1,2 +1,3 @@
 /TexTests/*
 !*.tex
+!/TexTests/fig

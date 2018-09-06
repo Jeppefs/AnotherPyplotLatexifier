@@ -46,7 +46,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoGolden.pdf", format = "pdf")
 
 """Two column - full width - Inner figure is golden ratio"""
-Latexify.Latexify(fig_width = text_width, columns=2, fontsize=10)
+Latexify.Latexify(fig_width = text_width, columns=2)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)

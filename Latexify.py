@@ -4,7 +4,7 @@ import matplotlib
 import numpy as np
 import pandas as pd
 
-def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8):
+def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8, label_width = None, label_height = None, AspectDetermination = None):
     """Set up matplotlib's RC params for LaTeX plotting.
     Call this before plotting a figure.
 
@@ -17,12 +17,15 @@ def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8):
     fig_height : float,  optional, cm
     columns : {1, 2, 3}
     fontsize : float, optional, standard 8pt
+    label_width : float, optional, cm
+    label_height : float, optional, cm
+    AspectDetermination : string, optional, "inner" or "outer" 
     """
 
     assert(columns in [1,2,3])
 
-    label_width = 1.25 # cm
-    label_height = 1.05 # cm 
+    #label_width = 1.25
+    #label_height = 1.05 
 
     if fig_width is None:
         fig_width = cmToInch(12.65076) # width in inches. The standard is report with 11pt font
@@ -31,20 +34,20 @@ def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8):
     if columns == 1:
         fig_width = fig_width * 0.99
     elif  columns == 2:
-        #fig_width = fig_width * (1/0.49)
-        fig_width = fig_width * 0.49
+        fig_width = fig_width * (1/0.49)
+        #fig_width = fig_width * 0.49
     elif columns == 3:
         fig_width = fig_width * 0.32
 
     if fig_height is None:
         golden_mean = (np.sqrt(5)-1.0)/2.0 # Aesthetic ratio
-        fig_height = fig_width*golden_mean * 1.5 # height in inches
+        fig_height = fig_width*golden_mean
 
     params = {'backend': 'ps',
               #'text.latex.preamble': ['\usepackage{gensymb}'],
               'axes.labelsize': fontsize+2, # fontsize for x and y labels (was 10)
               'axes.titlesize': fontsize+2,
-              'legend.fontsize': fontsize, # was 10
+              'legend.fontsize': fontsize+2, # was 10
               'xtick.labelsize': fontsize,
               'ytick.labelsize': fontsize,
               'text.usetex': True,

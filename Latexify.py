@@ -47,9 +47,9 @@ def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8, label_width
 
     params = {'backend': 'ps',
               #'text.latex.preamble': ['\usepackage{gensymb}'],
-              'axes.labelsize': fontsize+2, # fontsize for x and y labels (was 10)
-              'axes.titlesize': fontsize+2,
-              'legend.fontsize': fontsize+2, # was 10
+              'axes.labelsize': fontsize, # fontsize for x and y labels (was 10)
+              'axes.titlesize': fontsize,
+              'legend.fontsize': fontsize, # was 10
               'xtick.labelsize': fontsize,
               'ytick.labelsize': fontsize,
               'text.usetex': True,
@@ -57,7 +57,6 @@ def Latexify(fig_width=None, fig_height=None, columns=1, fontsize=8, label_width
              # 'font.family': 'serif'
     }
 
-    print(fig_width, fig_height)
     matplotlib.rcParams.update(params)
 
 

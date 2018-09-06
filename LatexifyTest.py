@@ -46,7 +46,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoGolden.pdf", format = "pdf")
 
 """Two column - full width - Inner figure is golden ratio"""
-Latexify.Latexify(fig_width = text_width, columns=2, fontsize=12)
+Latexify.Latexify(fig_width = text_width, columns=2, fontsize=10)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -58,7 +58,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoInnerGolden.pdf", format = "pdf")
 
 """One column - 0.8 width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width, columns=1)
+Latexify.Latexify(fig_width = text_width*0.8, columns=1)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)

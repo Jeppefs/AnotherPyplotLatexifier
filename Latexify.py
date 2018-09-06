@@ -30,11 +30,11 @@ def Latexify(fig_width=12.65076, fig_height=None, columns=1, fontsize=8, label_s
     fig_width = cmToInch(fig_width) # Change from width in cm to inches That's just how it works man. The standard is report with 11pt font
     
     if columns == 1:
-        fig_width = fig_width * 0.99 # 0.99 because that is the multiplier I use, to make a figure fit in latex. Should be 1.0???
+        fig_width = fig_width * 1.0  
     elif  columns == 2:
-        fig_width = fig_width * 0.49 # 0.49 because that is the multiplier I use, to make a figure fit in latex. Should be 1.0/2.0???
+        fig_width = fig_width * (1.0/2.0)
     elif columns == 3:
-        fig_width = fig_width * 0.32 # 0.32 because that is the multiplier I use, to make a figure fit in latex. Should be 1.0/3.0???
+        fig_width = fig_width * (1.0/3.0)
 
     """Calculate figure height"""
     if label_size is None:

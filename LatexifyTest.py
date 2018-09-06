@@ -34,7 +34,7 @@ ylabel = "Cake (kg)"
 legend = (["Linear","Parabola"])
 
 """Two column - full width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width, columns=2)
+Latexify.Latexify(fig_width = text_width*0.49)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -46,7 +46,31 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoGolden.pdf", format = "pdf")
 
 """Two column - full width - Inner figure is golden ratio"""
-Latexify.Latexify(fig_width = text_width, columns=2, label_size=[1.25, 1.05])
+Latexify.Latexify(fig_width = text_width*0.49, label_size=[1.25, 1.05])
+fig, ax = plt.subplots()
+ax.plot(x1, y1)
+ax.plot(x2, y2)
+ax.set_xlabel(xlabel)
+ax.set_ylabel(ylabel)
+ax.legend(legend)
+ax = Latexify.format_axes(ax)
+fig.tight_layout(pad=0.1)
+plt.savefig("TexTests/fig/TwoInnerGolden.pdf", format = "pdf")
+
+"""Two column - full width - Golden ratio - 11 pt"""
+Latexify.Latexify(fig_width = text_width*0.49, fontsize=11)
+fig, ax = plt.subplots()
+ax.plot(x1, y1)
+ax.plot(x2, y2)
+ax.set_xlabel(xlabel)
+ax.set_ylabel(ylabel)
+ax.legend(legend)
+ax = Latexify.format_axes(ax)
+fig.tight_layout(pad=0.1)
+plt.savefig("TexTests/fig/TwoGolden.pdf", format = "pdf")
+
+"""Two column - full width - Inner figure is golden ratio - 11 pt"""
+Latexify.Latexify(fig_width = text_width*0.49, fontsize=11, label_size=[1.25, 1.05])
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -70,7 +94,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/OneGoldenSmall.pdf", format = "pdf")
 
 """One column - full width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width, columns=1)
+Latexify.Latexify(fig_width = text_width*0.99, columns=1)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)

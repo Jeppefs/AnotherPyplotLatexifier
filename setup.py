@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(
-    name='TowelStuff',
-    version='0.1dev',
-    packages=['towelstuff',],
+    name='AnotherPyplotLatexifyer',
+    version='1.0dev',
+    packages=['AnotherPyplotLatexifyer',],
     license='None',
     long_description=open('README.md').read(),
 )

@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(
-    name='AnotherPyplotLatexifyer',
+    name='AnotherPyplotLatexifier',
     version='1.0dev',
-    packages=['AnotherPyplotLatexifyer',],
+    packages=['Latexify'],
     license='None',
     long_description=open('README.md').read(),
 )

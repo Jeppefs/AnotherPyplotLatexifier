@@ -5,7 +5,7 @@ Makes plots of different sizes for a 11pt report latex document.
 """
 
 """Initialise"""
-import Latexify as Latexify
+from AnotherPyplotLatexifyer import Latexify
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -106,4 +106,4 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/OneGoldenFull.pdf", format = "pdf")
 
 """Show"""
-#plt.show()
+plt.show()

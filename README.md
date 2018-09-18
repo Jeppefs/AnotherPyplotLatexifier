@@ -12,13 +12,10 @@ In terminal write:
 pip install git+https://github.com/Jeppefs/AnotherPyplotLatexifyer.git
 
 2. Load the package 
-
 To load the package, write: 
-
 from AnotherPyplotLatexifyer import Latexify
 
 3. Measure you latex document
-
 Measure the width of the figure in the lated document and other changes you want to make to the plot, and note them down.
 To find the text width in cm of your latex document load the package \usepackage{printlen}. In the document write \uselengthunit{cm}\printlength{\textwidth}. This will display the width in cm in the pdf. This also works in columns and subfigures. 
 

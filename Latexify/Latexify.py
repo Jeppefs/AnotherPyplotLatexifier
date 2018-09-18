@@ -52,7 +52,7 @@ def Latexify(fig_width=12.65076, fig_height=None, columns=1, fontsize=8, label_s
 
     """Insert parameters"""
     params = {'backend': 'ps',
-              #'text.latex.preamble': ['\usepackage{gensymb}'],
+              'text.latex.preamble': ['\usepackage{gensymb}'],
               'axes.labelsize': fontsize, # fontsize for x and y labels (was 10)
               'axes.titlesize': fontsize,
               'legend.fontsize': fontsize, # was 10

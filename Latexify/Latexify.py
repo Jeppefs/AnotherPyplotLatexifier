@@ -55,8 +55,6 @@ def Latexify(fig_width=12.65076, fig_height=None, columns=1, fontsize=8, label_s
             fig_height = fig_width*golden_mean
     else:
         if fig_height is None:
-            label_width = cmToInch(label_size[0])
-            label_height = cmToInch(label_size[1])
             inner_fig_width = fig_width - label_width
             inner_fig_height = inner_fig_width*golden_mean
             fig_height = inner_fig_height + label_height

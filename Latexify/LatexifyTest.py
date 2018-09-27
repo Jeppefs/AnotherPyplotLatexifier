@@ -4,8 +4,8 @@ Tests for the latexify packages
 Makes plots of different sizes for a 11pt report latex document. 
 """
 
-"""Initialise"""
-from AnotherPyplotLatexifyer import Latexify
+"""Packages"""
+import Latexify as Latexify
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -21,7 +21,8 @@ Common text widths:
 Tufte Computer Modern: 
 Tufte Computer Modern margin: 
 """
-text_width = 12.65076 # in cm
+text_width = 12.65076 *0.99 # in cm
+column_width = 6.19893 *0.98
 
 """Make some data"""
 x1 = np.arange(0,10.05,0.1)
@@ -34,7 +35,7 @@ ylabel = "Cake (kg)"
 legend = (["Linear","Parabola"])
 
 """Two column - full width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width*0.49)
+Latexify.Latexify(fig_width = column_width)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -46,7 +47,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoGolden.pdf", format = "pdf")
 
 """Two column - full width - Inner figure is golden ratio"""
-Latexify.Latexify(fig_width = text_width*0.49, label_size=[1.05, 1.05])
+Latexify.Latexify(fig_width = column_width, label_size=[1.05, 1.05])
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -58,7 +59,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoInnerGolden.pdf", format = "pdf")
 
 """Two column - full width - Golden ratio - 11 pt"""
-Latexify.Latexify(fig_width = text_width*0.49, fontsize=11)
+Latexify.Latexify(fig_width = column_width, fontsize=11)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -70,7 +71,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoGolden11.pdf", format = "pdf")
 
 """Two column - full width - Inner figure is golden ratio - 11 pt"""
-Latexify.Latexify(fig_width = text_width*0.49, fontsize=11, label_size=[1.05, 1.05])
+Latexify.Latexify(fig_width = column_width, fontsize=11, label_size=[1.05, 1.05])
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -82,7 +83,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoInnerGolden11.pdf", format = "pdf")
 
 """One column - 0.8 width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width*0.8, columns=1)
+Latexify.Latexify(fig_width = text_width*0.8/0.99, columns=1)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
@@ -94,7 +95,7 @@ fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/OneGoldenSmall.pdf", format = "pdf")
 
 """One column - full width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width*0.99, columns=1)
+Latexify.Latexify(fig_width = text_width, columns=1)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)

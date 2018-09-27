@@ -5,7 +5,7 @@ Makes plots of different sizes for a 11pt report latex document.
 """
 
 """Packages"""
-import Latexify as Latexify
+from Latexify import Latexify
 import numpy as np
 import matplotlib.pyplot as plt
 

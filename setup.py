@@ -2,8 +2,10 @@ from distutils.core import setup
 
 setup(
     name='AnotherPyplotLatexifier',
-    version='1.0',
-    packages=['Latexify'],
+    version='1.0b',
+    description="A setup for plots to be used in latex",
+    author="Jeppe Finne Sørensen",
+    packages=['Latexifier'],
     license='None',
     long_description=open('README.md').read(),
 )

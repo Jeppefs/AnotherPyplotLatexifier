@@ -37,8 +37,8 @@ def Latexify(fig_width=12.65076, fig_height=None, columns=1, fontsize=8, label_s
         if fig_height != None:
             fig_height = cmToInch(fig_height)
         if label_size != None:
-            label_size[0] = cmToInch(label_size[0])
-            label_size[1] = cmToInch(label_size[1])
+            label_width = cmToInch(label_size[0])
+            label_height = cmToInch(label_size[1])
 
     """Convert fig_width to inches and reduce sizes based on column"""
     # Is this really a good way of doing it? Additional columns namely creates more whitespace in latex, but how much??

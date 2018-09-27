@@ -9,11 +9,12 @@ User guide
 
 1. Install the package
 In terminal write: 
-pip install git+https://github.com/Jeppefs/AnotherPyplotLatexifyer.git
+pip install git+https://github.com/Jeppefs/AnotherPyplotLatexifier.git
 
 2. Load the package 
 To load the package, write: 
-from AnotherPyplotLatexifyer import Latexify
+from Latexifier import LatexifierFunctions 
+You can handedly import the package as LF for example for nicer access. 
 
 3. Measure you latex document
 Measure the width of the figure in the lated document and other changes you want to make to the plot, and note them down.
@@ -21,10 +22,10 @@ To find the text width in cm of your latex document load the package \usepackage
 
 4. Use the package
 Before plotting call: 
-Latexify.Latexify()
+LatexifierFunctions.Latexify()
 No input is required, but it only work well, if you input the correct measures. The most important input is the fig_width. The input is in cm. 
 If you would like to change the spines, call, after plotting before saving write:
-Latexify.format_axes(ax)
+LatexifierFunctions.format_axes(ax)
 where ax is the axis object. This only works when using the object oriented approach of matplotlib (which I highly recommend).  
 
 5. Pad yoursself on the back

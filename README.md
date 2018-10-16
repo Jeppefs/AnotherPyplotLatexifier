@@ -28,7 +28,7 @@ If you would like to change the spines, call, after plotting before saving write
 LatexifierFunctions.format_axes(ax) <br />
 where ax is the axis object. This only works when using the object oriented approach of matplotlib (which I highly recommend). <br />
 
-5. Pad yoursself on the back <br />
+5. Pad yourself on the back <br />
 Congratulations, you are now ready to make exceptionally nice plots in matplotlib in you latex documents! Never bother with figure dimensions again!
 
 Example of usage is given in the Latexify/LatexifyTest.py file. 

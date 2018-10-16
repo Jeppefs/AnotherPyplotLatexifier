@@ -14,7 +14,7 @@ pip install git+https://github.com/Jeppefs/AnotherPyplotLatexifier.git
 2. Load the package <br />
 To load the package, write: <br /> 
 from Latexifier import LatexifierFunctions <br /> 
-You can handedly import the package as LF for example for nicer access. 
+You can handely import the package as LF for example for nicer access. 
 
 3. Measure you latex document <br />
 Measure the width of the figure in the lated document and other changes you want to make to the plot, and note them down.

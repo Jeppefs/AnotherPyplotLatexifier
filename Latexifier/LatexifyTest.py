@@ -5,8 +5,9 @@ Makes plots of different sizes for a 11pt report latex document.
 """
 
 """Packages"""
-from Latexify import Latexify
+from Latexifier import LatexifierFunctions as LF
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
 """
@@ -35,74 +36,74 @@ ylabel = "Cake (kg)"
 legend = (["Linear","Parabola"])
 
 """Two column - full width - Golden ratio"""
-Latexify.Latexify(fig_width = column_width)
+LF.Latexify(fig_width = column_width)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
 ax.set_xlabel(xlabel)
 ax.set_ylabel(ylabel)
 ax.legend(legend)
-ax = Latexify.format_axes(ax)
+ax = LF.format_axes(ax)
 fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoGolden.pdf", format = "pdf")
 
 """Two column - full width - Inner figure is golden ratio"""
-Latexify.Latexify(fig_width = column_width, label_size=[1.05, 1.05])
+LF.Latexify(fig_width = column_width, label_size=[1.05, 1.05])
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
 ax.set_xlabel(xlabel)
 ax.set_ylabel(ylabel)
 ax.legend(legend)
-ax = Latexify.format_axes(ax)
+ax = LF.format_axes(ax)
 fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoInnerGolden.pdf", format = "pdf")
 
 """Two column - full width - Golden ratio - 11 pt"""
-Latexify.Latexify(fig_width = column_width, fontsize=11)
+LF.Latexify(fig_width = column_width, fontsize=11)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
 ax.set_xlabel(xlabel)
 ax.set_ylabel(ylabel)
 ax.legend(legend)
-ax = Latexify.format_axes(ax)
+ax = LF.format_axes(ax)
 fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoGolden11.pdf", format = "pdf")
 
 """Two column - full width - Inner figure is golden ratio - 11 pt"""
-Latexify.Latexify(fig_width = column_width, fontsize=11, label_size=[1.05, 1.05])
+LF.Latexify(fig_width = column_width, fontsize=11, label_size=[1.05, 1.05])
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
 ax.set_xlabel(xlabel)
 ax.set_ylabel(ylabel)
 ax.legend(legend)
-ax = Latexify.format_axes(ax)
+ax = LF.format_axes(ax)
 fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/TwoInnerGolden11.pdf", format = "pdf")
 
 """One column - 0.8 width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width*0.8/0.99, columns=1)
+LF.Latexify(fig_width = text_width*0.8/0.99, columns=1)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
 ax.set_xlabel(xlabel)
 ax.set_ylabel(ylabel)
 ax.legend(legend)
-ax = Latexify.format_axes(ax)
+ax = LF.format_axes(ax)
 fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/OneGoldenSmall.pdf", format = "pdf")
 
 """One column - full width - Golden ratio"""
-Latexify.Latexify(fig_width = text_width, columns=1)
+LF.Latexify(fig_width = text_width, columns=1)
 fig, ax = plt.subplots()
 ax.plot(x1, y1)
 ax.plot(x2, y2)
 ax.set_xlabel(xlabel)
 ax.set_ylabel(ylabel)
 ax.legend(legend)
-ax = Latexify.format_axes(ax)
+ax = LF.format_axes(ax)
 fig.tight_layout(pad=0.1)
 plt.savefig("TexTests/fig/OneGoldenFull.pdf", format = "pdf")
 

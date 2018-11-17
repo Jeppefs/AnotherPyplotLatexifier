@@ -60,6 +60,7 @@ def Latexify(fig_width=12.65076, fig_height=None, columns=1, fontsize=8, label_s
             fig_height = inner_fig_height + label_height
 
     """Insert parameters"""
+    matplotlib.rc('font', **{'family':'serif', 'serif':['Computer Modern Roman']})
     params = {'backend': 'ps',
               'text.latex.preamble': [r'\usepackage{gensymb}'],
               'axes.labelsize': fontsize, 
@@ -69,7 +70,6 @@ def Latexify(fig_width=12.65076, fig_height=None, columns=1, fontsize=8, label_s
               'ytick.labelsize': fontsize,
               'text.usetex': True,
               'figure.figsize': [fig_width,fig_height]
-             # 'font.family': 'serif'
     }
 
     matplotlib.rcParams.update(params)
